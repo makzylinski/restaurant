@@ -70,33 +70,33 @@ public class Burger {
     public void assembleBurger() {
         System.out.println("Please, assemble your burger");
 
-        System.out.println("Select 1 for Small Burger, price: $4.99");
-        System.out.println("Select 2 for Medium Burger, price: $6.99");
-        System.out.println("Select 3 for Small Burger, price: $8.99");
+        System.out.println("Select S for Small Burger, price: $4.99");
+        System.out.println("Select M for Medium Burger, price: $6.99");
+        System.out.println("Select L for Large Burger, price: $8.99");
 
         Scanner s = new Scanner(System.in);
         System.out.print("Pick your Burger: ");
         String selectedBurger = s.nextLine();
         switch (selectedBurger) {
-            case "1" -> {
+            case "S" -> {
                 System.out.println("You picked Small Burger, price $4.99");
                 type = "small";
                 price += 4.99;
             }
-            case "2" -> {
+            case "M" -> {
                 System.out.println("You picked Medium Burger, price $6.99");
                 type = "medium";
                 price += 6.99;
             }
-            case "3" -> {
-                System.out.println("You picked Big Burger, price $8.99");
-                type = "big";
+            case "L" -> {
+                System.out.println("You picked Large Burger, price $8.99");
+                type = "large";
                 price += 8.99;
             }
             default -> System.out.println("Error occurred.");
         }
 
-        System.out.println("Your Burger order is " + type + " price is $" + price);
+        System.out.println("Your Burger order is " + type.substring(0, 1).toUpperCase() + type.substring(1) + " Burger, price is $" + price);
 
     }
 }
