@@ -4,11 +4,16 @@ public class Burger {
     private String type;
     private double price = 0.0;
     private String topping = "";
+    private boolean deluxeBurger;
 
     public Burger() {
         type = "medium";
         price = 6.99;
         topping = "pickles, lettuce, onion, ";
+    }
+
+    public Burger(boolean isDeluxe) {
+        this.deluxeBurger = isDeluxe;
     }
 
     public double getPrice() {
@@ -58,11 +63,11 @@ public class Burger {
                 default -> System.out.println("Wrong input");
             }
 
-            if(i >= 2) {
+            if(i >= 2 && !deluxeBurger) {
                 System.out.println("You've reached free 3 toppings, any extra will cost you +$0.5");
             }
 
-            if(i >= 3) {
+            if(i >= 3 && !deluxeBurger) {
                 extraToppingCost += 0.5;
                 System.out.println("Your bill is extended by $" + extraToppingCost);
             }
@@ -73,13 +78,14 @@ public class Burger {
         price += extraToppingCost;
     }
 
-    public void assembleBurger() {
-        System.out.println("Please, assemble your burger");
-
+    public void burgerListMenu() {
         System.out.println("Select S for Small Burger, price: $4.99");
         System.out.println("Select M for Medium Burger, price: $6.99");
         System.out.println("Select L for Large Burger, price: $8.99");
-
+    }
+    public void assembleBurger() {
+        System.out.println("Please, assemble your burger");
+        burgerListMenu();
         Scanner s = new Scanner(System.in);
         System.out.print("Pick your Burger: ");
         String selectedBurger = s.nextLine();

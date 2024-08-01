@@ -52,8 +52,6 @@ public class SideItem {
             }
             default -> System.out.println("Error occurred.");
         }
-
-        System.out.println(price);
     }
 
     public void printMeal() {
