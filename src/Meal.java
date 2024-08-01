@@ -14,4 +14,8 @@ public class Meal {
         drink.printMeal();
         sideItem.printMeal();
     }
+
+    public double getTotalPrice() {
+        return burger.getPrice() + drink.getPrice() + sideItem.getPrice();
+    }
 }
