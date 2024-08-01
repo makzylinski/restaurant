@@ -18,27 +18,27 @@ public class SideItem {
         switch (selectedSideItem) {
             case "1" -> {
                 System.out.println("You picked Fries, price $1.99");
-                type = "small";
+                type = "fries";
                 price += 1.99;
             }
             case "2" -> {
                 System.out.println("You picked Coleslaw, price $2.99");
-                type = "medium";
+                type = "coleslaw";
                 price += 2.99;
             }
             case "3" -> {
                 System.out.println("You picked Chili, price $3.99");
-                type = "large";
+                type = "chili";
                 price += 3.99;
             }
             case "4" -> {
                 System.out.println("You picked Mashed Potatoes, price $4.99");
-                type = "large";
+                type = "mashed potatoes";
                 price += 4.99;
             }
             case "5" -> {
                 System.out.println("You picked Chips, price $5.99");
-                type = "large";
+                type = "chips";
                 price += 5.99;
             }
             default -> System.out.println("Error occurred.");
