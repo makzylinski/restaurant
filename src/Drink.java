@@ -5,6 +5,12 @@ public class Drink {
     private String type;
     private double price;
 
+    public Drink() {
+        this.type = "sprite";
+        this.size = "small";
+        this.price = 1.99;
+    }
+
     public void getListOfDrinks() {
         System.out.printf("%s%n".repeat(5),
                 "1) CocaCola - $1.99", "2) Beer - $2.99", "3) Sprite - $1.99", "4) 7UP - $1.99", "5) Wine - $5.99");
@@ -58,17 +64,26 @@ public class Drink {
         switch (selectedSize) {
             case "1" -> {
                 price += 2;
+                size = "big";
                 System.out.println("You selected Big, $2 was added to your bill");
             }
             case "2" -> {
                 price += 1;
+                size = "medium";
                 System.out.println("You selected Medium, $1 was added to your bill");
             }
-            case "3" -> System.out.println("You selected Small, no additional costs");
+            case "3" -> {
+                size = "small";
+                System.out.println("You selected Small, no additional costs");
+            }
 
             default -> System.out.println("Error occurred");
         }
 
         System.out.println(price);
+    }
+
+    public void printMeal() {
+        System.out.println("Drink " + type + ", size: " + size + " costs $" + price);
     }
 }

@@ -5,6 +5,12 @@ public class Burger {
     private double price = 0.0;
     private String topping = "";
 
+    public Burger() {
+        type = "medium";
+        price = 6.99;
+        topping = "pickles, lettuce, onion, ";
+    }
+
     public double getPrice() {
         return price;
     }
@@ -98,5 +104,9 @@ public class Burger {
 
         System.out.println("Your Burger order is " + type.substring(0, 1).toUpperCase() + type.substring(1) + " Burger, price is $" + price);
 
+    }
+
+    public void printMeal() {
+        System.out.println("Burger " + type + ", toppings: " + topping + " costs $" + price);
     }
 }

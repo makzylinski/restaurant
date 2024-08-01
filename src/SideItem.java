@@ -4,6 +4,11 @@ public class SideItem {
     private String type;
     private double price = 0.0;
 
+    public SideItem() {
+        this.type = "fries";
+        this.price = 1.99;
+    }
+
     public void getListOfItems() {
         System.out.printf("%s%n".repeat(5),
                 "1) Fries - $1.99", "2) Coleslaw - $2.99", "3) Chili - $3.99", "4) Mashed Potatoes - $4.99", "5) Chips - $5.99");
@@ -45,5 +50,9 @@ public class SideItem {
         }
 
         System.out.println(price);
+    }
+
+    public void printMeal() {
+        System.out.println("Side Item " + type + " costs $" + price);
     }
 }
