@@ -46,5 +46,29 @@ public class Drink {
         }
 
         System.out.println(price);
+        pickDrinksSize(type);
+    }
+
+    public void pickDrinksSize(String type) {
+        System.out.println("How big do you want your " + type + "?");
+        Scanner s = new Scanner(System.in);
+        System.out.printf("%s%n".repeat(3), "1) Big +$2", "2) Medium + $1", "3) Small (no additional costs)");
+        String selectedSize = s.nextLine();
+
+        switch (selectedSize) {
+            case "1" -> {
+                price += 2;
+                System.out.println("You selected Big, $2 was added to your bill");
+            }
+            case "2" -> {
+                price += 1;
+                System.out.println("You selected Medium, $1 was added to your bill");
+            }
+            case "3" -> System.out.println("You selected Small, no additional costs");
+
+            default -> System.out.println("Error occurred");
+        }
+
+        System.out.println(price);
     }
 }
