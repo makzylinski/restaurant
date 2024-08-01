@@ -5,8 +5,11 @@ public class Main {
 //        burger.addToppings();
 //
 //        System.out.println("Your bill: $" + burger.getPrice());
+//
+//        SideItem sideItem = new SideItem();
+//        sideItem.pickSideItem();
 
-        SideItem sideItem = new SideItem();
-        sideItem.pickSideItem();
+    Drink drink = new Drink();
+    drink.pickDrink();
     }
 }
