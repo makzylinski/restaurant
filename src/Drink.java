@@ -11,6 +11,10 @@ public class Drink {
         this.price = 1.99;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     public void getListOfDrinks() {
         System.out.printf("%s%n".repeat(5),
                 "1) CocaCola - $1.99", "2) Beer - $2.99", "3) Sprite - $1.99", "4) 7UP - $1.99", "5) Wine - $5.99");

@@ -9,6 +9,10 @@ public class SideItem {
         this.price = 1.99;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     public void getListOfItems() {
         System.out.printf("%s%n".repeat(5),
                 "1) Fries - $1.99", "2) Coleslaw - $2.99", "3) Chili - $3.99", "4) Mashed Potatoes - $4.99", "5) Chips - $5.99");
